@@ -22,4 +22,9 @@ public class AppointmentStep {
     public void enterAppointmentHour(String hora) {
         appointmentPage.txt_appointment_time.sendKeys(hora);
     }
+
+    @Step("Pulsar guardar cita")
+    public void clickSave() {
+        appointmentPage.btn_schedule.click();
+    }
 }

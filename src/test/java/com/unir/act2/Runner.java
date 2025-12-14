@@ -1,14 +1,14 @@
 package com.unir.act2;
 
-import org.junit.platform.suite.api.ConfigurationParameter;
-import org.junit.platform.suite.api.IncludeEngines;
-import org.junit.platform.suite.api.SelectClasspathResource;
-import org.junit.platform.suite.api.Suite;
+import org.junit.runner.RunWith;
+import net.serenitybdd.cucumber.CucumberWithSerenity;
+import io.cucumber.junit.CucumberOptions;
 
-@Suite
-@IncludeEngines("cucumber")
-@SelectClasspathResource("features")
-@ConfigurationParameter(key = "cucumber.glue", value = "com.unir.act2")
+@RunWith(CucumberWithSerenity.class)
+@CucumberOptions(
+        features = "src/test/resources/features",
+        glue = "com.unir.act2.definitions",
+        tags = "@Appointment"
+)
 public class Runner {
 }
-

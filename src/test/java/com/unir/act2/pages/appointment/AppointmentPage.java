@@ -16,4 +16,8 @@ public class AppointmentPage extends PageObject {
     // Segundo campo de texto
     @FindBy(id = "appointmentTime")
     public WebElementFacade txt_appointment_time;
+
+    // Botón de guardar cita
+    @FindBy(id = "btn_schedule")
+    public WebElementFacade btn_schedule;
 }
